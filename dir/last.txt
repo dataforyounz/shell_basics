@@ -1,0 +1,5 @@
+16. Speaker
+17. Faucet
+18. Coffee
+19. Glass
+20. Iron

@@ -1,0 +1,21 @@
+This is a list of random items I can see:
+01. Computer
+02. Table
+03. Bottle
+04. Chair
+05. Bench
+06. Phone
+07. Notebook
+08. Pen
+09. Cookies
+10. Tissue
+11. Candle
+12. Jug
+13. PostIt
+14. Stone
+15. Dress
+16. Speaker
+17. Faucet
+18. Coffee
+19. Glass
+20. Iron
