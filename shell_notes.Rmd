@@ -19,7 +19,7 @@ Get current working directory.
 ```{bash}
 pwd
 ```
-List files in current working directory
+List files in current working directory:
 ```{bash}
 ls
 ```
