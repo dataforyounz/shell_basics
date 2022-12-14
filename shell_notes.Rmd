@@ -1,16 +1,21 @@
 ---
-title: "Bash / Shell Notes"
+title: "Shell Notes"
 author: "Rob Taylor"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: html_document
+output: 
+  html_document:
+    toc: TRUE
+    toc_float:
+      collapsed: FALSE
+      smooth_scroll: TRUE   
 ---
 
 ```{r, echo = F}
 knitr::opts_chunk$set( eval = TRUE )
 ```
 
-#### Listing Files
-Get current working directoy.
+### Listing Files
+Get current working directory.
 ```{bash}
 pwd
 ```
@@ -33,7 +38,7 @@ To list the files in your root directory you simply type '/'
 ls /
 ```
 
-#### Absolute versus Relative Path
+### Absolute versus Relative Path
 In general, if the path begins with an '/' then it's absolute; otherwise, it's relative. For example, suppose you're in the directory ```/home/mydir``` and there is a file called ```myfile.txt``` located in it. The *relative path* to the file is simply
 ```{bash, eval = F}
 myfile.txt
@@ -49,7 +54,7 @@ Listing files in directories works the same way.
 ls /home/mydir
 ```
 
-#### Changing directories
+### Changing directories
 The ```..``` notation shifts you up one level to the parent directory. So, if you wanted to list the contents of the parent directory you can use
 ```{bash}
 ls ..
@@ -76,13 +81,13 @@ From home, your root directory is two levels up
 ls ~/../..
 ```
 
-#### Creating a File
+### Creating a File
 The simplest way to create a file is to use the redirection operator ```>``` or ```>>```. The ```>``` will overwrite an existing file of the same name, whereas the ```>>``` will append to it. To create an empty zero line file you can use the the following
 ```{bash, eval = F}
 > file.txt
 ```
 
-#### Creating and Removing Directories
+### Creating and Removing Directories
 To create a directory use the ```mkdir``` command. For example
 ```{bash, eval = F}
 mkdir new_dir
@@ -110,7 +115,7 @@ Next, create two files in the test folder called ```test_1.txt``` and ```test_2.
 ls test
 ```
 
-#### Copying Files
+### Copying Files
 To copy a file use the ```cp``` command. This command makes a simple copy of the original files. If a file with the same name already exists, then the copy command will overwrite the existing file.
 ```{bash, eval = F}
 cp old_name.txt new_name.txt
@@ -151,7 +156,7 @@ cp backup/test_1.txt ..
 ls ..
 ```
 
-#### Moving Files
+### Moving Files
 To copy a file use the ```mv``` command. This command works similarly to ```cp```. To move a file to another directory specify the directory at the end
 ```{bash, eval = F}
 mv file.txt new_folder
@@ -186,7 +191,7 @@ mv backup backup_new
 ls backup_new
 ```
 
-#### Deleting Files
+### Deleting Files
 To delete a file use the ```rm``` command. Once the file removed it is not shifted to the bin, it is removed properly. 
 ```{bash, eval = F}
 rm file.txt
@@ -221,14 +226,14 @@ rm original.txt duplicate.txt
 ls
 ```
 
-#### /tmp Folder
+### /tmp Folder
 This is where temporary files can be stored and is located below the root directory
 ```{bash}
 ls /
 ```
 
 
-#### Viewing contents of file
+### Viewing contents of file
 To view file contents use the ```cat``` command. 
 ```{bash}
 cat dir/file.txt
@@ -252,7 +257,7 @@ The file ```file_list.txt``` is much longer than ```file.txt```. If we wanted to
 less dir/file_list.txt
 ```
 
-#### Command Flags
+### Command Flags
 Flags modify the output of shell commands in various ways. 
 
 * ```-R``` shows every file and directory beneath the current directory, no matter how deeply nested
@@ -270,10 +275,10 @@ For example, to see all directories and files in current working directory run
 ls -R -F ..
 ```
 
-#### Help
+### Help
 To see what a function does use the ```man``` command. To exit press ```:q```.
 
-#### History
+### History
 To get recently used commands you can simply use the up-arrow key to scroll through. However, an easier way to see all previous commands is to use ```history```
 ```{bash, eval = F}
 history
@@ -284,7 +289,7 @@ A numbered list of commands is then printed. To rerun an earlier command you can
 ```
 Another approach is to use in ! front of the last command used. For example, to rerun the last ```head``` command ```!head``` can be used. 
 
-#### Using grep
+### Using grep
 The ```grep``` command is used to select rows that contain specific pieces of text. It can also be used to search for regualr expressions and patterns. It takes the following flags
 
 * ```-c```: print a count of the matching lines rather than the lines
@@ -315,7 +320,7 @@ You can also supply multiple files
 grep -i -c stone dir/file_list.txt dir/file.txt    
 ```
 
-#### Saving Outputs
+### Saving Outputs
 The redirection operator ```>``` can be used to assign outputs to a specified file. For example, to save the last 5 lines of ```file_list.txt``` to a file called ```last.txt``` use
 ```{bash}
 tail -n 5 dir/file_list.txt > dir/last.txt
@@ -348,7 +353,7 @@ tail -n 5 dir/file_list.txt | head -n 3 | grep -v Coffee
 ```
 
 
-#### Word Count
+### Word Count
 The command ```wc``` (word count) counts text in files. The following flags are availbale:
 
 * ```-c``` count the number of characters
@@ -364,7 +369,7 @@ Or, count the number of characters for the line with 'Coffee'
 tail -n 5 dir/file_list.txt | head -n 3 | grep Coffee | wc -c
 ```
 
-#### Wildcards
+### Wildcards
 Rather than writing out file paths in full wildcards can be used. One very useful wildcard is ```*``` which matches all characters. For example, to get the first 2 lines in ```file.txt``` and ```file_list.txt```, but not ```final.txt``` or ```last.txt``` the following command can be used
 ```{bash}
 head -n 2 dir/fil*.txt
