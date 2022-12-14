@@ -4,10 +4,6 @@ author: "Rob Taylor"
 date: "14 December, 2022"
 output: 
   html_document: 
-    toc: yes
-    toc_float:
-      collapsed: no
-      smooth_scroll: yes
     keep_md: yes
 ---
 
@@ -23,7 +19,7 @@ pwd
 ```
 ## /Users/robtaylor/Library/CloudStorage/GoogleDrive-taylor.rt17@gmail.com/My Drive/_Dataforyou/Projects/shell_basics
 ```
-List files in current working directory
+List files in current working directory:
 
 ```bash
 ls
@@ -35,6 +31,7 @@ ls
 ## shell_basics.Rproj
 ## shell_notes.Rmd
 ## shell_notes.html
+## shell_notes.md
 ```
 List files in another working directory
 
@@ -178,6 +175,7 @@ ls
 ## shell_basics.Rproj
 ## shell_notes.Rmd
 ## shell_notes.html
+## shell_notes.md
 ```
 or change the directory using an absolute path, for example
 
@@ -289,6 +287,7 @@ ls
 ## shell_basics.Rproj
 ## shell_notes.Rmd
 ## shell_notes.html
+## shell_notes.md
 ## test
 ```
 Copy both ```original.txt``` and ```duplicate.txt``` to the ```backup``` folder
@@ -456,6 +455,7 @@ ls
 ## shell_basics.Rproj
 ## shell_notes.Rmd
 ## shell_notes.html
+## shell_notes.md
 ```
 
 ### /tmp Folder
@@ -584,6 +584,7 @@ ls -R -F
 ## shell_basics.Rproj
 ## shell_notes.Rmd
 ## shell_notes.html
+## shell_notes.md
 ## 
 ## ./dir:
 ## file.txt
@@ -1014,6 +1015,7 @@ ls -R -F ..
 ## shell_basics.Rproj
 ## shell_notes.Rmd
 ## shell_notes.html
+## shell_notes.md
 ## 
 ## ../shell_basics/dir:
 ## file.txt
