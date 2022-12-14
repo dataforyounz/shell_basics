@@ -35,39 +35,11 @@ List the folders in the home directory:
 ls ~
 ```
 
-    ## Applications
-    ## Desktop
-    ## Documents
-    ## Downloads
-    ## Google Drive
-    ## Library
-    ## Movies
-    ## Music
-    ## Pictures
-    ## Public
-
 List the folders in the root directory:
 
 ``` bash
 ls /
 ```
-
-    ## Applications
-    ## Library
-    ## System
-    ## Users
-    ## Volumes
-    ## bin
-    ## cores
-    ## dev
-    ## etc
-    ## home
-    ## opt
-    ## private
-    ## sbin
-    ## tmp
-    ## usr
-    ## var
 
 Use the `..` command to access the root directory from the home
 directory:
@@ -76,40 +48,11 @@ directory:
 ls ~/../..
 ```
 
-    ## Applications
-    ## Library
-    ## System
-    ## Users
-    ## Volumes
-    ## bin
-    ## cores
-    ## dev
-    ## etc
-    ## home
-    ## opt
-    ## private
-    ## sbin
-    ## tmp
-    ## usr
-    ## var
-
 List the contents of the parent directory:
 
 ``` bash
 ls ..
 ```
-
-    ## Applications
-    ## Becasue It's Fun
-    ## Blogs
-    ## GOPI
-    ## Packages
-    ## Project List.docx
-    ## Publications
-    ## _CODE_BASE
-    ## d3
-    ## shell_basics
-    ## test_1.txt
 
 Change the current directory to the parent directory:
 
@@ -123,7 +66,7 @@ Change the current directory to the Documents directory:
 cd ~/Documents
 ```
 
-### Absolute versus Relative Path
+#### Absolute versus Relative Path
 
 In general, if the path begins with an `/` then it’s absolute;
 otherwise, it’s relative. For example, suppose you’re in the directory

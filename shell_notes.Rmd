@@ -21,30 +21,30 @@ These notes simply reflect my learning and the things I found useful. In part, I
 * ```/```: this is the root directory.
 
 For general user guidance use the ```man``` command, followed by the name of the function. This provides and and user information about the function. To exit out of the help screen type ```:q```.
-```{bash eval = F}
+```{bash eval=F}
 man <funciton-name>
 ```
 
 **Example**
 
 List the folders in the home directory:
-```{bash}
+```{bash eval=F}
 ls ~
 ```
 List the folders in the root directory:
-```{bash}
+```{bash eval=F}
 ls /
 ```
 Use the ```..``` command to access the root directory from the home directory:
-```{bash}
+```{bash eval=F}
 ls ~/../..
 ```
 List the contents of the parent directory:
-```{bash}
+```{bash eval=F}
 ls ..
 ```
 Change the current directory to the parent directory:
-```{bash, eval = F}
+```{bash, eval=F}
 cd ..
 ```
 Change the current directory to the Documents directory:
@@ -52,7 +52,7 @@ Change the current directory to the Documents directory:
 cd ~/Documents
 ```
 
-### Absolute versus Relative Path
+#### Absolute versus Relative Path
 In general, if the path begins with an ```/``` then it's absolute; otherwise, it's relative. For example, suppose you're in the directory ```/home/mydir``` and there is a file called ```myfile.txt``` located in it. The *relative path* to the file is simply
 ```{bash, eval = F}
 myfile.txt
