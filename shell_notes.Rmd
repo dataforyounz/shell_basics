@@ -17,16 +17,35 @@ These notes simply reflect my learning and the things I found useful. In part, I
 * ```cd```: changes directory to the path provided.
 * ```..```: used in conjunction with ```cd```, shifts up one level in the directory hierarchy.
 * ```ls```: lists the files and folders in the current directory.
-* ```~```: this is the home path. 
+* ```~```: this is the home directory.
+* ```/```: this is the root directory.
 
 **Example**
 
-List the folders in the home path:
+List the folders in the home directory:
 ```{bash}
 ls ~
 ```
-
-
+List the folders in the root directory:
+```{bash}
+ls /
+```
+Use the ```..``` command to access the root directory from the home directory:
+```{bash}
+ls ~/../..
+```
+List the contents of the parent directory:
+```{bash}
+ls ..
+```
+Change the current directory to the parent directory:
+```{bash, eval = F}
+cd ..
+```
+Change the current directory to the Documents directory:
+```{bash, eval = F}
+cd ~/Documents
+```
 
 ### Absolute versus Relative Path
 In general, if the path begins with an ```/``` then it's absolute; otherwise, it's relative. For example, suppose you're in the directory ```/home/mydir``` and there is a file called ```myfile.txt``` located in it. The *relative path* to the file is simply
@@ -45,14 +64,6 @@ Listing files in directories works the same way.
 ```{bash, eval = F}
 ls /home/mydir
 ```
-
-**Example**
-
-From the current directory, list the folders in Documents directory using an absolute path:
-```{bash}
-ls ~/Documents
-```
-
 
 
 ### Changing directories

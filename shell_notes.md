@@ -16,11 +16,12 @@ to some of the more common shell commands.
 - `..`: used in conjunction with `cd`, shifts up one level in the
   directory hierarchy.
 - `ls`: lists the files and folders in the current directory.
-- `~`: this is the home path.
+- `~`: this is the home directory.
+- `/`: this is the root directory.
 
 **Example**
 
-List the folders in the home path:
+List the folders in the home directory:
 
 ``` bash
 ls ~
@@ -36,6 +37,83 @@ ls ~
     ## Music
     ## Pictures
     ## Public
+
+List the folders in the root directory:
+
+``` bash
+ls /
+```
+
+    ## Applications
+    ## Library
+    ## System
+    ## Users
+    ## Volumes
+    ## bin
+    ## cores
+    ## dev
+    ## etc
+    ## home
+    ## opt
+    ## private
+    ## sbin
+    ## tmp
+    ## usr
+    ## var
+
+Use the `..` command to access the root directory from the home
+directory:
+
+``` bash
+ls ~/../..
+```
+
+    ## Applications
+    ## Library
+    ## System
+    ## Users
+    ## Volumes
+    ## bin
+    ## cores
+    ## dev
+    ## etc
+    ## home
+    ## opt
+    ## private
+    ## sbin
+    ## tmp
+    ## usr
+    ## var
+
+List the contents of the parent directory:
+
+``` bash
+ls ..
+```
+
+    ## Applications
+    ## Becasue It's Fun
+    ## Blogs
+    ## GOPI
+    ## Packages
+    ## Project List.docx
+    ## Publications
+    ## _CODE_BASE
+    ## d3
+    ## shell_basics
+    ## test_1.txt
+
+Change the current directory to the parent directory:
+
+``` bash
+cd ..
+```
+
+Change the current directory to the Documents directory:
+
+``` bash
+cd ~/Documents
+```
 
 ### Absolute versus Relative Path
 
@@ -65,20 +143,6 @@ Listing files in directories works the same way.
 ``` bash
 ls /home/mydir
 ```
-
-**Example**
-
-From the current directory, list the folders in Documents directory
-using an absolute path:
-
-``` bash
-ls ~/Documents
-```
-
-    ## Technical Analyst Technical Test September 2022.docx
-    ## regexcite
-    ## rob-macbook-pro-git
-    ## stripe
 
 ### Changing directories
 
