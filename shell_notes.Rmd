@@ -20,6 +20,11 @@ These notes simply reflect my learning and the things I found useful. In part, I
 * ```~```: this is the home directory.
 * ```/```: this is the root directory.
 
+For general user guidance use the ```man``` command, followed by the name of the function. This provides and and user information about the function. To exit out of the help screen type ```:q```.
+```{bash eval = F}
+man <funciton-name>
+```
+
 **Example**
 
 List the folders in the home directory:
@@ -63,34 +68,6 @@ In this case, you can access the file from anywhere because the full path has be
 Listing files in directories works the same way.
 ```{bash, eval = F}
 ls /home/mydir
-```
-
-
-### Changing directories
-The ```..``` notation shifts you up one level to the parent directory. So, if you wanted to list the contents of the parent directory you can use
-```{bash}
-ls ..
-```
-or the directory above that
-```{bash}
-ls ../..
-```
-You can also navigate using this notation, or using relative and absolute paths. To change directories you use the ```cd``` command. 
-```{bash}
-cd ../..
-pwd
-```
-and then list the contents using a relative path
-```{bash}
-ls 
-```
-or change the directory using an absolute path, for example
-```{bash, eval = F}
-cd /home/mydir
-```
-From home, your root directory is two levels up
-```{bash}
-ls ~/../..
 ```
 
 ### Creating a File
@@ -283,7 +260,7 @@ The ```-F``` flag isn't strictly necessary, but it's useful to include.
 
 To see everything under the parent folder
 For example, to see all directories and files in current working directory run
-```{bash}
+```{bash, eval = F}
 ls -R -F ..
 ```
 
