@@ -1,2 +1,2 @@
 # shell_basics
-Some introductory stuff for using shell
+Some notes I made when doing some introductory shell work :)
