@@ -3,45 +3,27 @@ Shell Notes
 Rob Taylor
 14 December, 2022
 
-### Listing Files
+### Introduction
 
-Get current working directory.
+These notes simply reflect my learning and the things I found useful. In
+part, I’m hoping this works as a reference tool, providing quick access
+to some of the more common shell commands.
 
-``` bash
-pwd
-```
+### Basic Commands
 
-    ## /Users/robtaylor/Library/CloudStorage/GoogleDrive-taylor.rt17@gmail.com/My Drive/_Dataforyou/Projects/shell_basics
+- `pwd`: gets the current working directory.
+- `cd`: changes directory to the path provided.
+- `..`: used in conjunction with `cd`, shifts up one level in the
+  directory hierarchy.
+- `ls`: lists the files and folders in the current directory.
+- `~`: this is the home path.
 
-List files in current working directory:
+**Example**
 
-``` bash
-ls
-```
-
-    ## README.md
-    ## dir
-    ## shell_basics.Rproj
-    ## shell_notes.Rmd
-    ## shell_notes.html
-    ## shell_notes.md
-
-List files in another working directory
+List the folders in the home path:
 
 ``` bash
-ls ~/Documents
-```
-
-    ## Technical Analyst Technical Test September 2022.docx
-    ## regexcite
-    ## rob-macbook-pro-git
-    ## stripe
-
-The tilde reflects the home path. You can list files and folders in the
-home directory even if your current directory is elsewhere
-
-``` bash
-ls ~/
+ls ~
 ```
 
     ## Applications
@@ -55,34 +37,9 @@ ls ~/
     ## Pictures
     ## Public
 
-Note that `ls ~` does the same thing. The tilde always refers to home.
-
-To list the files in your root directory you simply type ‘/’
-
-``` bash
-ls /
-```
-
-    ## Applications
-    ## Library
-    ## System
-    ## Users
-    ## Volumes
-    ## bin
-    ## cores
-    ## dev
-    ## etc
-    ## home
-    ## opt
-    ## private
-    ## sbin
-    ## tmp
-    ## usr
-    ## var
-
 ### Absolute versus Relative Path
 
-In general, if the path begins with an ‘/’ then it’s absolute;
+In general, if the path begins with an `/` then it’s absolute;
 otherwise, it’s relative. For example, suppose you’re in the directory
 `/home/mydir` and there is a file called `myfile.txt` located in it. The
 *relative path* to the file is simply
@@ -92,7 +49,9 @@ myfile.txt
 ```
 
 That is, because you’re already in the directory you don’t need to
-specify the file’s path. The *absolute path* for the file, however, is
+specify the file’s path.
+
+The *absolute path* for the file, however, is
 
 ``` bash
 /home/mydir/myfile.txt
@@ -106,6 +65,20 @@ Listing files in directories works the same way.
 ``` bash
 ls /home/mydir
 ```
+
+**Example**
+
+From the current directory, list the folders in Documents directory
+using an absolute path:
+
+``` bash
+ls ~/Documents
+```
+
+    ## Technical Analyst Technical Test September 2022.docx
+    ## regexcite
+    ## rob-macbook-pro-git
+    ## stripe
 
 ### Changing directories
 
@@ -171,7 +144,6 @@ ls
     ## dir
     ## shell_basics.Rproj
     ## shell_notes.Rmd
-    ## shell_notes.html
     ## shell_notes.md
 
 or change the directory using an absolute path, for example
@@ -301,7 +273,6 @@ ls
     ## original.txt
     ## shell_basics.Rproj
     ## shell_notes.Rmd
-    ## shell_notes.html
     ## shell_notes.md
     ## test
 
@@ -477,7 +448,6 @@ ls
     ## dir
     ## shell_basics.Rproj
     ## shell_notes.Rmd
-    ## shell_notes.html
     ## shell_notes.md
 
 ### /tmp Folder
@@ -609,7 +579,6 @@ ls -R -F
     ## dir/
     ## shell_basics.Rproj
     ## shell_notes.Rmd
-    ## shell_notes.html
     ## shell_notes.md
     ## 
     ## ./dir:
@@ -1039,7 +1008,6 @@ ls -R -F ..
     ## dir/
     ## shell_basics.Rproj
     ## shell_notes.Rmd
-    ## shell_notes.html
     ## shell_notes.md
     ## 
     ## ../shell_basics/dir:

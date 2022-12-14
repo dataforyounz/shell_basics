@@ -8,37 +8,34 @@ output: github_document
 ```{r, echo = F}
 knitr::opts_chunk$set( eval = TRUE )
 ```
+### Introduction
+These notes simply reflect my learning and the things I found useful. In part, I'm hoping this works as a reference tool, providing quick access to some of the more common shell commands.
 
-### Listing Files
-Get current working directory.
-```{bash}
-pwd
-```
-List files in current working directory:
-```{bash}
-ls
-```
-List files in another working directory
-```{bash}
-ls ~/Documents
-```
-The tilde reflects the home path. You can list files and folders in the home directory even if your current directory is elsewhere
-```{bash}
-ls ~/
-```
-Note that ```ls ~``` does the same thing. The tilde always refers to home. 
+### Basic Commands
 
-To list the files in your root directory you simply type '/'
+* ```pwd```: gets the current working directory.
+* ```cd```: changes directory to the path provided.
+* ```..```: used in conjunction with ```cd```, shifts up one level in the directory hierarchy.
+* ```ls```: lists the files and folders in the current directory.
+* ```~```: this is the home path. 
+
+**Example**
+
+List the folders in the home path:
 ```{bash}
-ls /
+ls ~
 ```
+
+
 
 ### Absolute versus Relative Path
-In general, if the path begins with an '/' then it's absolute; otherwise, it's relative. For example, suppose you're in the directory ```/home/mydir``` and there is a file called ```myfile.txt``` located in it. The *relative path* to the file is simply
+In general, if the path begins with an ```/``` then it's absolute; otherwise, it's relative. For example, suppose you're in the directory ```/home/mydir``` and there is a file called ```myfile.txt``` located in it. The *relative path* to the file is simply
 ```{bash, eval = F}
 myfile.txt
 ```
-That is, because you're already in the directory you don't need to specify the file's path. The *absolute path* for the file, however, is 
+That is, because you're already in the directory you don't need to specify the file's path. 
+
+The *absolute path* for the file, however, is 
 ```{bash, eval = F}
 /home/mydir/myfile.txt
 ```
@@ -48,6 +45,15 @@ Listing files in directories works the same way.
 ```{bash, eval = F}
 ls /home/mydir
 ```
+
+**Example**
+
+From the current directory, list the folders in Documents directory using an absolute path:
+```{bash}
+ls ~/Documents
+```
+
+
 
 ### Changing directories
 The ```..``` notation shifts you up one level to the parent directory. So, if you wanted to list the contents of the parent directory you can use
